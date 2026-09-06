@@ -83,10 +83,14 @@
 	</dependencies>
 
 	<build>
+		<finalName>online-store-api</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<finalName>online-store-api</finalName>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
