@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: OnlineStoreAPI
+  datasource:
+    password: ${MYSQL_PASSWORD}
+    url: jdbc:mariadb://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}?createDatabaseIfNotExist=true
+    username: ${MYSQL_USER}
+    driver-class-name: org.mariadb.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+server:
+  port: ${API_PORT:8080}
+logging:
+  level:
+    org.springframework.boot.context.config: DEBUG
+    org.springframework.jdbc.datasource: DEBUG
+    org.flywaydb: DEBUG
