@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>online-store-api</artifactId>
+	<artifactId>webstore-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
@@ -83,13 +83,13 @@
 	</dependencies>
 
 	<build>
-		<finalName>online-store-api</finalName>
+		<finalName>webstore</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<finalName>online-store-api</finalName>
+					<finalName>webstore</finalName>
 				</configuration>
 			</plugin>
 		</plugins>

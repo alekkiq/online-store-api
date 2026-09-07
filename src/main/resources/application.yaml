@@ -1,9 +1,9 @@
 spring:
   application:
-    name: OnlineStoreAPI
+    name: WebstoreAPI
   datasource:
     password: ${MYSQL_PASSWORD}
-    url: jdbc:mariadb://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}?createDatabaseIfNotExist=true
+    url: jdbc:mariadb://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}
     username: ${MYSQL_USER}
     driver-class-name: org.mariadb.jdbc.Driver
     hikari:
@@ -29,3 +29,4 @@ logging:
     org.springframework.boot.context.config: DEBUG
     org.springframework.jdbc.datasource: DEBUG
     org.flywaydb: DEBUG
+    com.zaxxer.hikari: DEBUG
